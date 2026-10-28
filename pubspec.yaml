@@ -1,0 +1,60 @@
+name: readtogether
+description: "ReadTogether — мобильное приложение для совместного чтения и обсуждения электронных книг (курсовая работа №2, Flutter + SQLite)."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Локальная база данных SQLite (Android / iOS / macOS)
+  sqflite: ^2.3.3
+  # SQLite через FFI для запуска на Windows / Linux / macOS desktop
+  sqflite_common_ffi: ^2.3.3
+  path: ^1.9.0
+  path_provider: ^2.1.4
+  # Хранение текущей сессии (id вошедшего пользователя)
+  shared_preferences: ^2.3.2
+  # Хеширование паролей (SHA-256 + соль)
+  crypto: ^3.0.5
+  # Выбор файла книги (EPUB / PDF / TXT) на экране «Добавить книгу»
+  file_picker: ^10.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/covers/
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.otf
+          weight: 400
+        - asset: assets/fonts/Inter-Medium.otf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.otf
+          weight: 600
+        - asset: assets/fonts/Inter-Bold.otf
+          weight: 700
+    - family: Lora
+      fonts:
+        - asset: assets/fonts/Lora-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Lora-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Lora-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Lora-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/Lora-BoldItalic.ttf
+          weight: 700
+          style: italic
